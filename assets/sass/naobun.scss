@@ -3,6 +3,11 @@
 
 // Mixins, fonts, extensions
 
+@font-face {
+    font-family: 'Kelson Sans';
+    src: url('../fonts/KelsonSans_bold.otf');
+}
+
 @mixin font-desc($family, $height, $size) {
   font-family: $family;
   line-height: $height;
@@ -33,7 +38,7 @@ body {
 h1 { @include font-desc('Titillium Web', 1.000, 2.500em); } 
 h2 { @include font-desc('Titillium Web', 1.000, 2.500em); } 
 h3 {
-  @include font-desc('Roboto Condensed', 1.375, 1.500em);
+  @include font-desc('Kelson Sans', 1.375, 1.500em);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -113,8 +118,9 @@ a, a:hover { cursor: pointer; color: #13b9b6; }
     }
   }
   li {
-    font-family: 'Roboto Condensed';
+    font-family: 'Kelson Sans';
     text-transform: uppercase;
+    font-weight: 400;
     font-size: 1.000em;
     padding: 5px;
     &:hover {
@@ -327,7 +333,7 @@ a, a:hover { cursor: pointer; color: #13b9b6; }
   text-align: center;
   color: white;
   label { 
-    font-family: 'Roboto Condensed';
+    font-family: 'Kelson Sans';
     text-transform: uppercase;
     font-size: 0.800em;
   }

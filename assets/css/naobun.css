@@ -72,7 +72,7 @@
 
 @font-face {
   font-family: 'Kelson Sans';
-  src: 'url(../fonts/KelsonSansBold.otf'; }
+  src: url("../fonts/KelsonSans_bold.otf"); }
 .float-bottom {
   position: absolute;
   bottom: 0; }
@@ -171,6 +171,7 @@ a, a:hover {
   .navbar li {
     font-family: 'Kelson Sans';
     text-transform: uppercase;
+    font-weight: 400;
     font-size: 1.000em;
     padding: 5px; }
     .navbar li:hover {
