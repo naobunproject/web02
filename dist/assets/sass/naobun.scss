@@ -1,0 +1,462 @@
+@charset 'utf-8';
+@import 'social';
+
+// Mixins, fonts, extensions
+
+@font-face {
+    font-family: 'Kelson Sans';
+    src:'url(../fonts/KelsonSansBold.otf';
+}
+
+@mixin font-desc($family, $height, $size) {
+  font-family: $family;
+  line-height: $height;
+  font-size: $size;
+}
+
+@mixin rotate($deg) {
+  -moz-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -webkit-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+.float-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+// General Styles
+
+body {
+  @include font-desc('Raleway', 1.563, 1.175em);
+  background: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+h1 { @include font-desc('Titillium Web', 1.000, 2.500em); } 
+h2 { @include font-desc('Titillium Web', 1.000, 2.500em); } 
+h3 {
+  @include font-desc('Kelson Sans', 1.375, 1.500em);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+a, a:hover { cursor: pointer; color: #13b9b6; }
+
+.btn-default {
+  background: #13b9b6;
+  border: transparent;
+  color: white;
+  &:hover {
+    background: #f76b27;
+    border: transparent;
+    color: white;
+  } 
+}
+ 
+.btn-primary {    
+  font-family: 'Titillium Web';
+  text-transform: uppercase;
+  background: #f76b27;
+  border: transparent;
+  &:hover {
+    background: white;
+    color: #13b9b6; 
+  }
+}
+
+// Modal
+
+.modal {
+  position: relative;
+  h2 { color: #13b9b6; }
+  .hello {
+    width: 30%;
+    margin-left: 35%;    
+    @media screen and (min-width: 768px){    
+      position: absolute;
+      margin: 0;
+      bottom: 10px;
+      left: 0;
+    }    
+  }
+  #mc_embed_signup {    
+    clear: left;
+    label { width: 30%; }
+    .field {
+      width: 90%;      
+      padding: 3px;
+      margin: 10px;
+      color: #0f0c11;
+    }
+    @media screen and (min-width: 768px){
+      width: 65%;
+      margin-left: 35%;
+      .field { width: 60%; }
+    }
+  }
+}
+
+// Navigation Bar
+
+.navbar {  
+  width: 100%;
+  padding: 0;
+  background: white;
+  border: 0;
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  img {
+    margin-top: -5px;
+    @media screen and (max-width: 768px){
+      width: 80%;
+      margin-top: 1px; 
+    }
+  }
+  li {
+    font-family: 'Kelson Sans';
+    text-transform: uppercase;
+    font-size: 1.000em;
+    padding: 5px;
+    &:hover {
+      background: #13b9b6;
+      .nav-link { color: white; }
+    }
+  }
+  .nav-link {
+    color: #13b9b6;
+    &:active { color: #f76b27; }
+    text-decoration: none;
+  }
+  .navbar-toggle {
+    background: #13b9b6;
+    color: white;
+    border-color:transparent;
+    &:hover {
+      background: #f76b27;
+    }
+    &:focus {
+      background: #13b9b6;
+    }
+  }
+  &.navbar-secondary {
+    position: relative;
+    background: #f76b27;
+    height: 40px;
+    margin-top: 50px;
+    padding: -5px 0;
+    li, a {
+      color: white;
+      padding-top: 8px;
+      &:hover {
+        background: white;
+        color: #f76b27;
+      }
+    }
+    span { color: white; }
+    button {
+      background: transparent;
+      border: 0;
+      &:active {
+        background: #13b9b6;
+      }
+    }
+    .dropdown-menu { background: #13b9b6; }
+  }
+}
+
+// Jumbotrons
+
+.jumbotron {
+  margin: -40px 0 0 0;
+  overflow: none;
+  color: white;
+  p {
+    font-size: 1.100em;
+    @media screen and (max-width: 767px) { font-size: 0.900em; }
+  }  
+  a { color: white; }  
+  h1 {
+    text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+      font-size: 3.500em;
+      margin-left: -5px;
+    }
+  }
+  .landing-text {
+    position: fixed;
+    z-index: 0;    
+    p {
+      max-width: 95%;
+      font-size: 0.950em;
+      @media screen and (max-width: 767px) { font-size: 0.800em; }
+    }
+    @media screen and (max-width: 991px) {      
+      left: -10px;
+      padding-left: 30px;
+      padding-top: 25%;
+      background: black; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.9)); /*Safari 5.1-6*/
+      background: -o-linear-gradient(bottom, rgba(0,0,0,0), rgba(0,0,0,0.9)); /*Opera 11.1-12*/
+      background: -moz-linear-gradient(bottom, rgba(0,0,0,0), rgba(0,0,0,0.9)); /*Fx 3.6-15*/
+      background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.9)); /*Standard*/      
+    }
+  }
+  &.jumbotron-primary {
+    height: 720px;
+    background: #b443a2;
+    header {
+      text-align: center;
+      position: fixed;
+      z-index: 0;
+    }
+  }
+  &.jumbotron-secondary {
+    position: relative;
+    z-index: 1;
+    .btn-primary {
+      background: #13b9b6;
+      font-family: 'Raleway';
+      border: transparent;
+      &:hover {
+        background: white;
+        color: #13b9b6; 
+      }
+    }
+    .upcoming-event {
+      width: 90%;
+      margin: 10px 0;
+      border: 5px solid white;
+    }
+    .lightwidget-widget {
+      width: 100%;
+      border: 0;
+      overflow: hidden;
+    }
+  } 
+}
+
+// Main Menu
+
+.main-menu {
+  position: relative;
+  z-index: 2;
+  background: white;
+  padding: 30px;
+  h3 {
+    color: white;
+    font-size: 1.800em;
+  }
+  p {
+    font-size: 0.750em;
+    padding: 10px 5px;
+  }
+  header {
+    h3 {
+      color: #13b9b6;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.750em;
+      b {
+        color: #f76b27;
+        text-decoration: none;
+      }
+    }
+  }
+  .btn {
+    position: absolute;
+    top: 140px;
+    right: 15px;
+  }
+  .row-primary-image {
+    height: 500px;
+    background: #9f43eb;
+    h3 {
+      font-size: 2.100em;
+      position: absolute;
+      bottom: 78px;
+      left: 10px;
+    }
+  }
+  .row-primary-explainer {
+    height: 100px;
+    p {
+      max-width: 80%;
+      margin-left: 7px;
+    }
+    .btn { top: 530px; }
+  }
+  .row-secondary {
+    height: 200px;
+  }
+  .col-img {
+    background: #b169a5;
+  }
+  #topImg {
+    h3 {
+      @include rotate (-90deg);
+      position: absolute;
+      top: 75px;
+      right: -52px;
+    }
+  }
+  #ctrImg {
+    h3 {
+      @include rotate (90deg);
+      position: absolute;
+      top: 75px;
+      left: -34px;
+    }
+  }
+  #endImg {
+    h3 {
+      @include rotate (-90deg);
+      position: absolute;
+      top: 75px;
+      right: -75px;
+    }
+  }
+}
+
+// Mailchimp Form
+
+.mailchimp-form {
+  position: relative;
+  z-index: 2;
+  background: url('../img/paint.jpg');
+  padding: 10px;
+  text-align: center;
+  color: white;
+  label { 
+    font-family: 'Kelson Sans';
+    text-transform: uppercase;
+    font-size: 0.800em;
+  }
+  span { font-size: 0.700em; }
+  a { color: white; }
+  .inline-form {
+    display: inline-block;
+  }
+}
+
+// White Sections
+
+.white {
+  position: relative;
+  z-index: 2;
+  background: white;  
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.info {
+  p {
+    color: #0f0c11;
+    font-size: 1.200em;
+    @media screen and (max-width: 767px) { font-size: 1.000em; }
+  }
+  h2 { color: #f76b27; }
+}
+
+.description {
+  p {
+    color: #0f0c11;
+    font-size: 1.425em;
+    @media screen and (max-width: 767px) { font-size: 1.300em; }
+    &:first-child:first-letter {
+      float: left;
+      padding-right: 5px;
+      margin: 0; 
+      color:  #f76b27;    
+      @include font-desc('Titillium Web', 1.000, 3.750em);
+    }
+  }
+}
+
+.whitespace {
+  position: relative;
+  z-index: 2;
+  background: white;
+  height: 50px;
+  margin: 0;
+}
+
+// Footer
+
+footer {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  background-image: url('../img/grass.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+  p  { font-size: 0.700em; }
+  h3 { font-size: 0.900em; color: #f76b27; margin-top:20px; }
+  li { font-size: 0.700em; list-style-type: none; }
+  .links {
+    a {
+      color: #171f26;
+      &:hover { color: #f76b27; }
+    }
+    .hr-hidden {
+      @media screen and (min-width: 768px) {
+        opacity: 0;
+      }
+    }
+  }
+  .footer-img {
+    width: 150%;
+    position: absolute;
+    top: 130px;
+    left: -50%;        
+  }
+  .rsdf-logo {
+    width: 80%;
+    margin: 15px 10px 5px -20px;
+    @media screen and (max-width: 991px){
+      width: 40%;
+    }
+    @media screen and (max-width: 767px){
+      width: 60%;
+    }
+  }
+  .small-footer {
+    text-align: center;
+  }
+  @media screen and (max-width: 991px){
+    text-align: center;
+  }
+}
+
+// Social
+
+#social-buttons {
+  display: inline;
+  .img-circle {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    color: white;
+    @media screen and (max-width: 768px) {
+      width: 32px;
+      height: 32px;
+    }
+    i {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font-size: 2.250em;
+      @media screen and (max-width: 768px) {
+        top: 9px;
+        left: 9px;
+        font-size: 1.300em;
+      } 
+    }
+  }
+}
