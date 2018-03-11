@@ -76,14 +76,21 @@
 .float-bottom {
   position: absolute;
   bottom: 0; }
+  @media screen and (max-width: 767px) {
+    .float-bottom {
+      bottom: 190px;
+      padding-bottom: 5px; } }
 
 body {
   font-family: "Raleway";
   line-height: 1.563;
-  font-size: 1.175em;
+  font-size: 1.125em;
   background: white;
   overflow-x: hidden;
   overflow-y: scroll; }
+  @media screen and (max-width: 767px) {
+    body {
+      padding-bottom: 80px; } }
 
 h1 {
   font-family: "Titillium Web";
@@ -166,8 +173,8 @@ a, a:hover {
     margin-top: -5px; }
     @media screen and (max-width: 768px) {
       .navbar img {
-        width: 80%;
-        margin-top: 1px; } }
+        width: 100%;
+        margin-left: -10px; } }
   .navbar li {
     font-family: 'Kelson Sans';
     text-transform: uppercase;
@@ -178,6 +185,20 @@ a, a:hover {
       background: #13b9b6; }
       .navbar li:hover .nav-link {
         color: white; }
+  .navbar .dropdown-menu {
+    margin-left: -90px;
+    background: #13b9b6; }
+    .navbar .dropdown-menu a {
+      color: white; }
+      .navbar .dropdown-menu a:hover {
+        color: #f76b27; }
+  @media screen and (max-width: 767px) {
+    .navbar .btn-primary {
+      background: transparent;
+      color: #f76b27; }
+      .navbar .btn-primary:active, .navbar .btn-primary:focus {
+        background: white;
+        color: #13b9b6; } }
   .navbar .nav-link {
     color: #13b9b6;
     text-decoration: none; }
@@ -203,15 +224,33 @@ a, a:hover {
       .navbar.navbar-secondary li:hover, .navbar.navbar-secondary a:hover {
         background: white;
         color: #f76b27; }
-    .navbar.navbar-secondary span {
-      color: white; }
-    .navbar.navbar-secondary button {
+    .navbar.navbar-secondary .btn-primary {
       background: transparent;
+      color: white;
       border: 0; }
-      .navbar.navbar-secondary button:active {
-        background: #13b9b6; }
-    .navbar.navbar-secondary .dropdown-menu {
-      background: #13b9b6; }
+      .navbar.navbar-secondary .btn-primary:active, .navbar.navbar-secondary .btn-primary:focus {
+        background: white;
+        color: #13b9b6; }
+  .navbar.navbar-mobile {
+    height: 80px;
+    background: #f76b27; }
+    .navbar.navbar-mobile .navbar-nav {
+      width: 100%;
+      display: flex;
+      flex-direction: row; }
+    .navbar.navbar-mobile .nav-item {
+      height: 80px;
+      width: 25%;
+      flex-grow: 1;
+      overflow: hidden;
+      text-align: center; }
+    .navbar.navbar-mobile b {
+      font-size: 0.700em; }
+    .navbar.navbar-mobile li, .navbar.navbar-mobile a {
+      color: white; }
+      .navbar.navbar-mobile li:hover, .navbar.navbar-mobile a:hover {
+        background: white;
+        color: #13b9b6; }
 
 .jumbotron {
   margin: -40px 0 0 0;
@@ -239,9 +278,10 @@ a, a:hover {
       @media screen and (max-width: 767px) {
         .jumbotron .landing-text p {
           font-size: 0.800em; } }
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 767px) {
       .jumbotron .landing-text {
-        left: -10px;
+        width: 100%;
+        left: 0;
         padding-left: 30px;
         padding-top: 25%;
         background: black;
@@ -261,6 +301,9 @@ a, a:hover {
       text-align: center;
       position: fixed;
       z-index: 0; }
+    @media screen and (max-width: 767px) {
+      .jumbotron.jumbotron-primary {
+        height: 450px; } }
   .jumbotron.jumbotron-secondary {
     position: relative;
     z-index: 1; }
@@ -285,23 +328,34 @@ a, a:hover {
   z-index: 2;
   background: white;
   padding: 30px; }
+  @media screen and (max-width: 767px) {
+    .main-menu {
+      width: 110%;
+      left: -5%;
+      overflow: hidden; } }
   .main-menu h3 {
     color: white;
     font-size: 1.800em; }
   .main-menu p {
     font-size: 0.750em;
     padding: 10px 5px; }
+    @media screen and (max-width: 767px) {
+      .main-menu p {
+        font-size: 0.700em; } }
   .main-menu header h3 {
     color: #13b9b6;
     text-align: center;
     text-transform: uppercase;
     font-size: 1.750em; }
+    @media screen and (max-width: 767px) {
+      .main-menu header h3 {
+        font-size: 1.325em; } }
     .main-menu header h3 b {
       color: #f76b27;
       text-decoration: none; }
   .main-menu .btn {
     position: absolute;
-    top: 140px;
+    top: 150px;
     right: 15px; }
   .main-menu .row-primary-image {
     height: 500px;
@@ -311,10 +365,14 @@ a, a:hover {
       position: absolute;
       bottom: 78px;
       left: 10px; }
+      @media screen and (max-width: 767px) {
+        .main-menu .row-primary-image h3 {
+          font-size: 1.625em;
+          bottom: 80px; } }
   .main-menu .row-primary-explainer {
     height: 100px; }
     .main-menu .row-primary-explainer p {
-      max-width: 80%;
+      max-width: 75%;
       margin-left: 7px; }
     .main-menu .row-primary-explainer .btn {
       top: 530px; }
@@ -330,7 +388,7 @@ a, a:hover {
     transform: rotate(-90deg);
     position: absolute;
     top: 75px;
-    right: -52px; }
+    right: -54px; }
   .main-menu #ctrImg h3 {
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
@@ -339,7 +397,7 @@ a, a:hover {
     transform: rotate(90deg);
     position: absolute;
     top: 75px;
-    left: -34px; }
+    left: -36px; }
   .main-menu #endImg h3 {
     -moz-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
@@ -348,7 +406,7 @@ a, a:hover {
     transform: rotate(-90deg);
     position: absolute;
     top: 75px;
-    right: -75px; }
+    right: -77px; }
 
 .mailchimp-form {
   position: relative;
@@ -367,6 +425,11 @@ a, a:hover {
     color: white; }
   .mailchimp-form .inline-form {
     display: inline-block; }
+  @media screen and (max-width: 767px) {
+    .mailchimp-form h3 {
+      font-size: 1.125em; }
+    .mailchimp-form .btn {
+      margin-top: 10px; } }
 
 .white {
   position: relative;
