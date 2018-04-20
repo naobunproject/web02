@@ -399,6 +399,37 @@ a, a:hover {
     font-family: "Titillium Web";
     line-height: 1;
     font-size: 3.75em; }
+	
+	
+/* Titles */
+
+div.title-list {
+	margin: 15px;
+}
+
+p.title-list-individual {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.title-list-individual.thumb img {
+	object-fit: cover;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.title-detail {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.title-detail.thumb img {
+	object-fit: cover;
+	width: 200px;
+	height: 200px;
+}
 
 .whitespace {
   position: relative;

@@ -8,6 +8,12 @@ import { HeroComponent } from './hero/hero.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { TitleDetailComponent }  from './title-detail/title-detail.component';
+import { TitlesComponent }      from './titles/titles.component';
+import { TitleService }          from './title.service'; 
+import { IndexComponent } from './index/index.component';
+
+import { AppRoutingModule }     from './app-routing.module';
 
 
 @NgModule({
@@ -17,12 +23,16 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     HeroComponent,
     FooterComponent,
     MainMenuComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    TitleDetailComponent,
+    TitlesComponent,
+    IndexComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [TitleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
