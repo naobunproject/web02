@@ -1,0 +1,12 @@
+<section class="container">
+
+    <div class="row row-primary">
+    
+    	<div *ngFor="let creator of creators" class="creator-list row row-primary">
+        	<p class="creator-list-individual thumb"><img src="./assets/img/creators/{{creator.id}}-thumb.jpg" /></p>
+            <p class="creator-list-individual"><a routerLink="/creator/{{creator.id}}">{{creator.name}}</a></p>
+        </div>
+    
+    </div>
+
+</section>

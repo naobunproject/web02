@@ -403,21 +403,14 @@ a, a:hover {
 	
 /* Titles */
 
-div.title-list {
+div.title-list, div.creator-list {
 	margin: 15px;
-}
-
-p.title-list-individual {
-	display: block;
-	width: 100%;
-	text-align: center;
 }
 
 .title-list-individual.thumb img {
 	object-fit: cover;
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
+	width: 250px;
+	height: 400px;
 }
 
 .title-detail {
@@ -430,6 +423,89 @@ p.title-list-individual {
 	width: 200px;
 	height: 200px;
 }
+
+.title-detail .btn {
+	margin-right: 15px;
+}
+
+/* Creators */
+
+p.creator-list-individual {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.creator-list-individual.thumb img {
+	object-fit: cover;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.hero-creator {
+	height: 300px;
+}
+
+p.creator-list-individual {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.creator-photo {
+	text-align: center;
+}
+.creator-photo img {
+	object-fit: cover;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.creator-detail .creator-photo {
+	margin-top: -100px;
+	margin-bottom: 30px;
+}
+
+.creator-detail {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.creator-detail.thumb {
+	text-align: center;
+}
+
+.creator-detail h3 {
+	color: #13b9b6;
+	font-size: 1.750em;
+}
+.creator-detail h3 span {
+	display: block;
+	font-size: 0.5em;
+	color: #f76b27;
+}
+
+p.creator-summary {
+	width: 70%;
+	text-align: left;
+	margin: 0 auto;
+}
+
+ul.creator-social {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+li.creator-social-item {
+	display: inline;
+	margin: 10px;
+}
+li.creator-social-item a {
+	padding: 7px;
+}
+
 
 .whitespace {
   position: relative;
