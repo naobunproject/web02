@@ -1,6 +1,6 @@
 <section *ngIf="creator">
 
-    <div class="jumbotron hero-creator" id="index-top" style="background-position: center center; background-image: url(./assets/img/titles/1.jpg);">
+    <div class="jumbotron hero-creator" id="index-top" [ngStyle]="{'background': 'transparent url(' + creator.headerimg + ') no-repeat center center'}">
     </div>
     
     <div class="container creator-detail">
@@ -9,6 +9,7 @@
            		<div class="creator-photo thumb"><img src="./assets/img/titles/{{creator.id}}-thumb.jpg" /></div>
                 <h3>{{creator.name}} <span>Role: {{creator.role}}</span></h3>
             	<p class="creator-summary">{{creator.summary}}</p>
+            	<p class="creator-summary">{{title.summary}}</p>
                   <ul class="creator-social">
                     <li class="creator-social-item" *ngIf="creator.sminstagram"><a href="https://instagram.com/{{creator.sminstagram}}"><i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a></li>
                     <li class="creator-social-item" *ngIf="creator.smfacebook"><a href="https://www.facebook.com/{{creator.smfacebook}}"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Facebook</span></a></li>
