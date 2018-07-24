@@ -17,12 +17,14 @@ import { CreatorService }          from './creator.service';
 import { IndexComponent } from './index/index.component';
 
 import { AppRoutingModule }     from './app-routing.module';
+import { HeaderMobileComponent } from './header-mobile/header-mobile.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    HeaderMobileComponent,
     HeroComponent,
     FooterComponent,
     MainMenuComponent,
