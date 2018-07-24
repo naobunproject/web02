@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'Kelson Sans';
-    src: url('../fonts/KelsonSans_bold.otf');
+    src:'url(../fonts/KelsonSansBold.otf';
 }
 
 @mixin font-desc($family, $height, $size) {
@@ -25,22 +25,15 @@
 .float-bottom {
   position: absolute;
   bottom: 0;
-  @media screen and (max-width: 767px){
-    bottom: 190px;
-    padding-bottom: 5px;
-  }
 }
 
 // General Styles
 
 body {
-  @include font-desc('Raleway', 1.563, 1.125em);
+  @include font-desc('Raleway', 1.563, 1.175em);
   background: white;
   overflow-x: hidden;
   overflow-y: scroll;
-  @media screen and (max-width: 767px){
-    padding-bottom: 80px;
-  }
 }
 h1 { @include font-desc('Titillium Web', 1.000, 2.500em); } 
 h2 { @include font-desc('Titillium Web', 1.000, 2.500em); } 
@@ -120,39 +113,18 @@ a, a:hover { cursor: pointer; color: #13b9b6; }
   img {
     margin-top: -5px;
     @media screen and (max-width: 768px){
-      width: 100%;
-      margin-left: -10px; 
+      width: 80%;
+      margin-top: 1px; 
     }
   }
   li {
     font-family: 'Kelson Sans';
     text-transform: uppercase;
-    font-weight: 400;
     font-size: 1.000em;
     padding: 5px;
     &:hover {
       background: #13b9b6;
       .nav-link { color: white; }
-    }
-  }
-  .dropdown-menu {
-    margin-left: -90px;
-    background: #13b9b6;
-    a {
-      color: white;
-      &:hover {
-        color: #f76b27;
-      }
-    }
-  }
-  @media screen and (max-width: 767px){
-    .btn-primary {
-      background: transparent;
-      color: #f76b27;
-      &:active, &:focus {
-        background: white;
-        color: #13b9b6;
-      }
     }
   }
   .nav-link {
@@ -185,39 +157,15 @@ a, a:hover { cursor: pointer; color: #13b9b6; }
         color: #f76b27;
       }
     }
-    .btn-primary {
+    span { color: white; }
+    button {
       background: transparent;
-      color: white;
       border: 0;
-      &:active, &:focus {
-        background: white;
-        color: #13b9b6;
+      &:active {
+        background: #13b9b6;
       }
     }
-  }
-  &.navbar-mobile {
-    height: 80px;
-    background: #f76b27;
-    .navbar-nav {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-    }
-    .nav-item {
-      height: 80px;
-      width: 25%;
-      flex-grow: 1;
-      overflow: hidden;
-      text-align: center;
-    }
-    b { font-size: 0.700em; }
-    li, a {
-      color: white;
-      &:hover {
-        background: white;
-        color: #13b9b6;
-      }
-    }
+    .dropdown-menu { background: #13b9b6; }
   }
 }
 
@@ -247,9 +195,8 @@ a, a:hover { cursor: pointer; color: #13b9b6; }
       font-size: 0.950em;
       @media screen and (max-width: 767px) { font-size: 0.800em; }
     }
-    @media screen and (max-width: 767px) {
-      width: 100%;      
-      left: 0;
+    @media screen and (max-width: 991px) {      
+      left: -10px;
       padding-left: 30px;
       padding-top: 25%;
       background: black; /* For browsers that do not support gradients */
@@ -266,9 +213,6 @@ a, a:hover { cursor: pointer; color: #13b9b6; }
       text-align: center;
       position: fixed;
       z-index: 0;
-    }
-    @media screen and (max-width: 767px) {
-      height: 450px;
     }
   }
   &.jumbotron-secondary {
@@ -303,11 +247,6 @@ a, a:hover { cursor: pointer; color: #13b9b6; }
   z-index: 2;
   background: white;
   padding: 30px;
-  @media screen and (max-width: 767px) {
-    width: 110%;
-    left: -5%;
-    overflow: hidden;
-  }
   h3 {
     color: white;
     font-size: 1.800em;
@@ -315,9 +254,6 @@ a, a:hover { cursor: pointer; color: #13b9b6; }
   p {
     font-size: 0.750em;
     padding: 10px 5px;
-    @media screen and (max-width: 767px) {
-      font-size: 0.700em;
-    }
   }
   header {
     h3 {
@@ -325,9 +261,6 @@ a, a:hover { cursor: pointer; color: #13b9b6; }
       text-align: center;
       text-transform: uppercase;
       font-size: 1.750em;
-      @media screen and (max-width: 767px) {
-        font-size: 1.325em;
-      }
       b {
         color: #f76b27;
         text-decoration: none;
@@ -336,7 +269,7 @@ a, a:hover { cursor: pointer; color: #13b9b6; }
   }
   .btn {
     position: absolute;
-    top: 150px;
+    top: 140px;
     right: 15px;
   }
   .row-primary-image {
@@ -347,16 +280,12 @@ a, a:hover { cursor: pointer; color: #13b9b6; }
       position: absolute;
       bottom: 78px;
       left: 10px;
-      @media screen and (max-width: 767px) {
-        font-size: 1.625em;
-        bottom: 80px;
-      }
     }
   }
   .row-primary-explainer {
     height: 100px;
     p {
-      max-width: 75%;
+      max-width: 80%;
       margin-left: 7px;
     }
     .btn { top: 530px; }
@@ -372,7 +301,7 @@ a, a:hover { cursor: pointer; color: #13b9b6; }
       @include rotate (-90deg);
       position: absolute;
       top: 75px;
-      right: -54px;
+      right: -52px;
     }
   }
   #ctrImg {
@@ -380,7 +309,7 @@ a, a:hover { cursor: pointer; color: #13b9b6; }
       @include rotate (90deg);
       position: absolute;
       top: 75px;
-      left: -36px;
+      left: -34px;
     }
   }
   #endImg {
@@ -388,7 +317,7 @@ a, a:hover { cursor: pointer; color: #13b9b6; }
       @include rotate (-90deg);
       position: absolute;
       top: 75px;
-      right: -77px;
+      right: -75px;
     }
   }
 }
@@ -411,10 +340,6 @@ a, a:hover { cursor: pointer; color: #13b9b6; }
   a { color: white; }
   .inline-form {
     display: inline-block;
-  }
-  @media screen and (max-width: 767px) {
-    h3 { font-size: 1.125em; }
-    .btn { margin-top: 10px; }
   }
 }
 
