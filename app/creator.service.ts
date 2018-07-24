@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 import { Observable ,  of } from 'rxjs';
 
@@ -8,7 +9,7 @@ import { CREATORS } from './mock-creators';
 @Injectable()
 export class CreatorService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getCreators(): Observable<Creator[]> {
     // TODO: send the message _after_ fetching the heroes
