@@ -1,12 +1,192 @@
 [
   {
 	  "id": 1,
-	  "name": "Jane Doe",
-	  "role": "Writer",
+	  "name": "Bonni Rambatan",
+	  "role": "CEO",
 	  "heroimage": "01",
-	  "summary": "Chocolate bar chocolate cake souffle. Chocolate cake I love I love pastry, jelly beans bear claw marshmallow sesame snaps cookie Lemon drops chocolate bar halvah",
-	  "smtwitter": "janedoe",
-	  "smfacebook": "janedoe",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 2,
+	  "name": "Naomi Saddhadhika",
+	  "role": "COO",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 3,
+	  "name": "utiuts",
+	  "role": "CLIPO",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 4,
+	  "name": "Keinesasih",
+	  "role": "CMO",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 5,
+	  "name": "Ina Hidayati",
+	  "role": "Operations Assistant",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 6,
+	  "name": "Sesa Wulandari",
+	  "role": "Marketing Associate",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 7,
+	  "name": "Dyanasthasia Rin",
+	  "role": "Marketing Associate",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 8,
+	  "name": "Widy Dinarti",
+	  "role": "Impact Associate",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 9,
+	  "name": "Adhytia Putra",
+	  "role": "Multimedia Associate",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 10,
+	  "name": "Marcellino Nugraha",
+	  "role": "Music Producer",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 11,
+	  "name": "Sarah Puspaherning",
+	  "role": "Graphic Designer",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 12,
+	  "name": "Taiyou",
+	  "role": "Voice Talent",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 13,
+	  "name": "Edwina Setyaningrum",
+	  "role": "Voice Talent",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 14,
+	  "name": "Jasmine Surkatty",
+	  "role": "Creator",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 15,
+	  "name": "Kathrinna Rakhmavika",
+	  "role": "Creator",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 16,
+	  "name": "RinfaN",
+	  "role": "Creator",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 17,
+	  "name": "Ardine Keyla",
+	  "role": "Creator",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 18,
+	  "name": "soyatu",
+	  "role": "Illustrator",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
+	  "sminstagram": ""
+  }
+  {
+	  "id": 18,
+	  "name": "soyatu",
+	  "role": "Illustrator",
+	  "heroimage": "01",
+	  "summary": "",
+	  "smtwitter": "",
+	  "smfacebook": "",
 	  "sminstagram": ""
   }
 ];

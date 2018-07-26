@@ -12,11 +12,11 @@
         <div class="row row-primary">
             <div class="col-md-3 title-detail thumb"><img src="./assets/img/titles/{{title.id}}-thumb.jpg" /></div>
             <div class="col-md-9 title-detail summary">
-            	<p>Genre: {{title.genre}}</p>
-            	<p>{{title.summary}}</p>
+              <h3>{{title.logline}} <span>Rating: {{title.rating}}</span></h3>
+            	<p class="summary">{{title.summary}}</p>
               <p>
-                <a class="btn btn-primary btn-lg" href="#">Read Now</a>
-                <a class="btn btn-primary btn-lg" href="#">Trailer</a>
+                <a class="btn btn-primary btn-lg" href="{{title.link}}" *ngIf="title.link; else comingsoon">Read Now</a>
+                <ng-template #comingsoon><span class="comingsoon-txt">{{title.status}}</span></ng-template>
               </p>
             </div>
         </div>

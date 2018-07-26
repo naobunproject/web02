@@ -1,9 +1,12 @@
-<section class="container">
+<section class="container titles-page">
+
+    <h1>Titles</h1>
 
     <div class="row row-primary">
     
     	<div *ngFor="let title of titles" class="title-list row row-primary">
-        	<p class="title-list-individual thumb"><a routerLink="/title/{{title.id}}"><img src="./assets/img/titles/{{title.id}}-thumb.jpg" /></a></p>
+        	<div class="title-list-individual thumb"><img src="./assets/img/titles/{{title.id}}-thumb.jpg" /></div>
+            <div class="after"><a routerLink="/title/{{title.id}}">{{title.name}}</a></div>
         </div>
     
     </div>

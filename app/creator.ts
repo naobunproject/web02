@@ -2,7 +2,7 @@ export class Creator {
   id: number;
   name: string;
   role: string;
-  headerimg: string;
+  heroimage: string;
   summary: string;
   smtwitter: string;
   smfacebook: string;
